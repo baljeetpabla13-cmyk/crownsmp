@@ -1,0 +1,78 @@
+# =============================================
+#   CrownSMP Configuration
+# =============================================
+
+lives:
+  starting-lives: 3
+  on-elimination: SPECTATOR   # SPECTATOR or BAN
+  ban-duration-seconds: -1    # -1 = permanent ban (only used when on-elimination: BAN)
+  revival-weakness-seconds: 60
+
+scatter:
+  radius: 5000                # Crowns scatter within ±radius from world spawn
+  min-y: 64
+  max-y: 120
+
+# =============================================
+#   Crown Ability Cooldowns (seconds)
+# =============================================
+cooldowns:
+  tides:
+    water-knockback: 8
+  inferno:
+    fire-strike: 10
+  storms:
+    lightning-strike: 12
+    electric-arrow: 5
+  titans:
+    vein-mine: 15
+    earth-wall: 20
+  shadows:
+    teleport: 8
+    stealth: 20
+  frost:
+    freeze: 10
+  blood:
+    # lifesteal is passive — no cooldown entry needed
+  void:
+    void-teleport: 15
+
+# =============================================
+#   Crown Ability Tuning
+# =============================================
+abilities:
+  tides:
+    knockback-strength: 2.5
+  inferno:
+    fire-strike-duration-ticks: 100   # 5 seconds
+  storms:
+    lightning-damage: 6.0
+    speed-amplifier: 1                # Speed II during storms
+  titans:
+    extra-hearts: 4                   # +4 hearts (8 HP)
+    vein-mine-radius: 5
+    wall-duration-ticks: 100
+    wall-size: 3                      # 3x5 wall
+  shadows:
+    teleport-range: 16
+    stealth-duration-ticks: 100
+    mob-detection-range-reduction: 0.5
+  frost:
+    freeze-duration-ticks: 80
+    slow-amplifier: 2
+  blood:
+    lifesteal-per-hit: 1.0            # HP restored per hit
+    kill-heal: 4.0
+  void:
+    teleport-range: 32
+
+# =============================================
+#   Revival Requirements
+# =============================================
+revival:
+  # Number of players who must participate in the ritual
+  required-participants: 2
+  # Crowns that must be present at ritual (at least this many)
+  required-crowns: 1
+  # Ritual circle radius (blocks)
+  ritual-radius: 5
