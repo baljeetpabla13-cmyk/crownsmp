@@ -53,7 +53,7 @@ public class CrownAbilityListener implements Listener {
                 .subtract(attacker.getLocation().toVector())
                 .normalize().multiply(strength).setY(0.4);
         target.setVelocity(dir);
-        target.getWorld().spawnParticle(Particle.WATER_SPLASH, target.getLocation(), 30, 0.3, 0.3, 0.3);
+        target.getWorld().spawnParticle(Particle.SPLASH, target.getLocation(), 30, 0.3, 0.3, 0.3);
         target.getWorld().playSound(target.getLocation(), Sound.ENTITY_GENERIC_SPLASH, 1f, 1f);
 
         plugin.getCrownManager().applyCooldown(attacker, key);
