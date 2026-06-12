@@ -1,0 +1,20 @@
+name: CrownSMP
+version: '${project.version}'
+main: com.crownSMP.CrownSMPPlugin
+api-version: '1.21'
+description: Legendary Crown SMP plugin
+authors: [ CrownSMP ]
+
+commands:
+  crown:
+    description: Main CrownSMP command
+    usage: /crown <give|remove|lives|revive|scatter|reload> [args]
+    permission: crownsmp.admin
+
+permissions:
+  crownsmp.admin:
+    description: Full admin access to Crown commands
+    default: op
+  crownsmp.crown.wear:
+    description: Ability to wear and use Crowns
+    default: true
